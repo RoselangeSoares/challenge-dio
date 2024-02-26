@@ -17,7 +17,7 @@ body {
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 99vh;
     flex-direction: column;
     background-image: url(../imgs/wall.png);
 }
@@ -60,4 +60,12 @@ body {
 .enemy {
     background-image: url(../imgs/ralph.png);
     background-size: cover;
+}
+
+.rodape {
+    display: flex;
+    background-color: var(--segunda-cor);
+    font-size: .500rem;
+    justify-content: center;
+    padding: 1px;
 }
