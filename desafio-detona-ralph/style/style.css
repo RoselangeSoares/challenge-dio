@@ -63,9 +63,9 @@ body {
 }
 
 .rodape {
+    padding: 1px;
     display: flex;
-    background-color: var(--segunda-cor);
     font-size: .500rem;
     justify-content: center;
-    padding: 1px;
+    background-color: var(--segunda-cor);
 }

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+:root {
+    --primeira-cor: #ffc0cb;
+    --segunda-cor: #fc1e8a;
+    --terceira-cor: #03001e;
+    --quarta-cor: #fff;
+    --quinta-cor: #504040;
+
+    --font-primaria: 'Krona One', sans serif;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    user-select: none;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    font-family: var(--font-primaria);
+    background: linear-gradient(325deg, #e284c7 0%, #3303c0 40%, #ec38bc 60%, #03001e 100%);
+}
+
+h2 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    color: var(--quarta-cor);
+    text-transform: uppercase;
+}
+
+.container {
+    gap: 30px;
+    display: flex;
+    margin-top: 5rem;
+    padding: 40px 60px;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(325deg, #03001e 0%, #3303c0 30%, #ec38bc 70%, #fdeff9 100%);
+}
+
+.reset {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 20em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--terceira-cor);
+    background-color: var(--quarta-cor);
+}
+
+.reset:focus {
+    color: var(--segunda-cor);
+    background-color: var(--terceira-cor);
+}
+
+.game {
+    gap: 10px;
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    font-size: 3em;
+    transition: 0.25s;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    background-color: var(--quarta-cor);
+}
+
+.item::after {
+    inset: 0;
+    content: '';
+    /* opacity: 0.80; */
+    transition: 0.25s;
+    position: absolute;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    background: var(--quinta-cor);
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch {
+    transform: rotateY(180deg);
+}
+
+.rodape {
+    width: 100%;
+    padding: 2px 2px;
+    margin-top: auto;
+    font-size: .700rem;
+    text-align: center;
+    color: var(--primeira-cor);
+}
