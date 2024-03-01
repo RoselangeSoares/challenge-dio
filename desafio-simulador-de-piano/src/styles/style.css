@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+:root {
+    --primeira-cor: #e3f2fd;
+    --segunda-cor: #000000;
+    --terceira-cor: #4b4b4b;
+    --quarta-cor: #17d4d4;
+    --quinta-cor: #8c8c8c;
+
+    --font-principal: 'Kode Mono', sans serif;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    font-family: var(--font-principal);
+    background-color: var(--primeira-cor);
+}
+
+.container {
+    width: 780px;
+    padding: 35px 40px;
+    border-radius: 20px;
+    background-color: var(--segunda-cor);
+}
+
+.container header {
+    display: flex;
+    align-items: center;
+    color: var(--quinta-cor);
+    justify-content: space-between;
+}
+
+header h2 {
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+
+header .column {
+    display: flex;
+    align-items: center;
+}
+
+header .column span {
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+}
+
+.volume-slider input {
+    align-content: var(--primeira-cor);
+}
+
+.keys-check input {
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    border-radius: 30px;
+    background-color: var(--terceira-cor);
+}
+
+.keys-check input::before {
+    top: 50%;
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: 0.3rem;
+    position: absolute;
+    border-radius: inherit;
+    transition: all 0.3s ease;
+    transform: translateY(-50%);
+    background-color: var(--quinta-cor);
+}
+
+.keys-check input:checked::before {
+    left: 2.1rem;
+    background-color: var(--primeira-cor);
+}
+
+.piano-keys {
+    display: flex;
+    margin-top: 40px;
+}
+
+.piano-keys .key {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    color: var(--quinta-cor);
+    text-transform: uppercase;
+}
+
+.piano-keys .white {
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    border: 1px solid var(--terceira-cor);
+    background: linear-gradient(#fff 96%, #d6d4d4 4%);
+}
+
+.piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgb(0, 0, 0, 0.5);
+    background: linear-gradient(to buttom #fff 0%, #eee 100%);
+}
+
+.piano-keys .black {
+    z-index: 2;
+    width: 44px;
+    height: 140px;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid var(--terceira-cor);
+    background: linear-gradient(#636060, #000);
+}
+
+.piano-keys .black.active {
+    box-shadow: inset -5px 5px 10px rgb(255, 255, 255, 1.1);
+    background: linear-gradient(to buttom #000, #434343);
+}
+
+.piano-keys span {
+    width: 100%;
+    bottom: 20px;
+    font-size: 1.13rem;
+    position: absolute;
+    text-align: center;
+}
+
+.piano-keys .key.hide span {
+    display: none;
+}
+
+.rodape {
+    width: 100%;
+    display: flex;
+    font-weight: 500;
+    padding: 2px 2px;
+    margin-top: auto;
+    font-size: .700rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--quarta-cor);
+}
